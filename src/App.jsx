@@ -57,7 +57,7 @@ const App = () => {
   };
   console.log(pokemonData);
   return (
-    <div className=" px-10 pb-10">
+    <div className=" px-10 pb-10 bg-orange-500">
       {loading ? (
         <div className="h-screen flex flex-col justify-center items-center">
           <img
