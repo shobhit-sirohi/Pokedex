@@ -1,4 +1,4 @@
-const TypeColor = {
+const typeColors = {
   bug: "#729f3f",
   dragon: "#53a4cf",
   fairy: "#fdb9e9",
@@ -18,5 +18,4 @@ const TypeColor = {
   rock: "#a38c21",
   water: "#4592c4",
 };
-
-export default TypeColor;
+export default typeColors;

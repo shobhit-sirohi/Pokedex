@@ -6,7 +6,7 @@ import {
 import Card from "./components/Card";
 import Nav from "./components/Nav";
 import gif from "./images/pikachu-gif.gif";
-import TypeColor from "./components/TypeColor";
+
 const App = () => {
   const [pokemonData, setPokemonData] = useState([]);
   const [nextUrl, setNextUrl] = useState("");
@@ -57,15 +57,15 @@ const App = () => {
   };
   console.log(pokemonData);
   return (
-    <div className=" px-10 pb-10 bg-orange-500">
+    <div className="px-10 pb-10 bg-orange-500 ">
       {loading ? (
-        <div className="h-screen flex flex-col justify-center items-center">
+        <div className="flex flex-col items-center justify-center h-screen">
           <img
             className="h-60"
             src={gif}
             alt="loading image"
           />
-          <h2 className="text-3xl font-bold text-white pt-4">
+          <h2 className="pt-4 text-3xl font-bold text-white">
             Loading...
           </h2>
         </div>
@@ -73,41 +73,41 @@ const App = () => {
         <>
           <Nav />
 
-          <div className="flex space-x-4 text-xl font-medium pb-8 justify-center ">
+          <div className="flex justify-center pb-8 space-x-4 text-xl font-medium ">
             <button
-              className="bg-white rounded-md py-2 px-4 hover:text-orange-500 hover:font-bold"
+              className="px-4 py-2 bg-white rounded-md hover:text-orange-500 hover:font-bold"
               onClick={prev}
             >
               Prev
             </button>
             <button
-              className="bg-white rounded-md py-2 px-4 hover:text-orange-500 hover:font-bold"
+              className="px-4 py-2 bg-white rounded-md hover:text-orange-500 hover:font-bold"
               onClick={next}
             >
               Next
             </button>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10  ">
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
             {pokemonData.map((pokemon, i) => {
               return <Card key={i} pokemon={pokemon} />;
             })}
           </div>
-          <div className="flex space-x-4 text-xl font-medium pt-8 justify-center ">
+          <div className="flex justify-center pt-8 space-x-4 text-xl font-medium ">
             <button
-              className="bg-white rounded-md py-2 px-4 hover:text-orange-500 hover:font-bold"
+              className="px-4 py-2 bg-white rounded-md hover:text-orange-500 hover:font-bold"
               onClick={prev}
             >
               Prev
             </button>
             <button
-              className="bg-white rounded-md py-2 px-4 hover:text-orange-500 hover:font-bold"
+              className="px-4 py-2 bg-white rounded-md hover:text-orange-500 hover:font-bold"
               onClick={next}
             >
               Next
             </button>
           </div>
-          <div className="pt-8 flex text-base font-medium text-white justify-center md:justify-start ">
+          <div className="flex justify-center pt-8 text-base font-medium text-white md:justify-start ">
             <a
               className=" hover:italic"
               href="https://www.shobhitsirohi.com/"
